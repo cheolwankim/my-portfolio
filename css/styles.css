@@ -11409,12 +11409,12 @@ header.masthead .h1 {
 }
 
 button {
-  background: #1aab8a;
-  border-radius: 30px;
-  color: #fff;
+  background: white;
+  border-radius: 10px;
+  color: #bebebf;
   border: none;
   position: relative;
-  height: 60px;
+  height: 30px;
   /* font-size:1.6em; */
   margin: 10px;
   padding: 0 3rem;
