@@ -1,7 +1,7 @@
 /* 첫번째 블록 */
 .my_first_block {
-  background-color: rgb(0, 0, 0,0.5);
-  height: 700px;
+  background-color: rgba(76, 80, 139, 0.5);
+  height: 900px;
   display: flex;
   justify-content: center;
   align-items: center;
