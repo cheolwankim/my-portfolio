@@ -1,11 +1,9 @@
 # 포트폴리오 사이트
 
-https://cheolwansphtsite.netlify.app/  
-
 <br><br>
 ![phtpicture](https://github.com/cheolwankim/myphotsite/assets/105213482/9ce89a80-e97b-4c3a-9209-bbb639aca083)
 
-<br><br><br>
+<br>https://cheolwansphtsite.netlify.app/  <br><br>
 ## 🛠 Using Skill
 
 <img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white">
