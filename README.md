@@ -1,7 +1,7 @@
 # 포트폴리오 사이트
 
 <br><br>
-![phtpicture](https://github.com/cheolwankim/myphotsite/assets/105213482/9ce89a80-e97b-4c3a-9209-bbb639aca083)
+![Image](https://github.com/user-attachments/assets/bd1c074c-ccff-4fe6-b9c9-bd522d7ce24a)
 
 <br>https://cheolwansphtsite.netlify.app/  <br><br>
 ## 🛠 Using Skill
