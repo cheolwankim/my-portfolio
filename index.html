@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
   <head>
     <meta charset="utf-8" />
@@ -200,6 +200,72 @@
         <!-- 기존 프로젝트 블록들 -->
         <!-- (Notion, Blog, 날씨, 포트폴리오 등 기존 코드 유지) -->
 
+        <!-- Cafe Map: Kakao 지도 기반 카페/음식점 검색 서비스 -->
+        <div class="my_first_block">
+          <div class="my_first_content_wrap">
+            <div class="my_first_content_title">
+              <div class="my_first_content_title_name">
+                Cafe Map 카카오 지도 기반 카페/음식점 검색
+              </div>
+              <div class="my_first_content_title_date">
+                <a href="https://github.com/cheolwankim/cafe-map-naver">
+                  ▶ 2025.11 (1인 개인프로젝트, Github Flow 형식)
+                </a>
+              </div>
+            </div>
+            <img
+              src="/assets/img/img3/cafe-map.png"
+              alt="Cafe Map 프로젝트 썸네일"
+            />
+            <div class="my_first_block_content_text">
+              <div class="my_first_block_content_text_one">
+                <span>Next.js + TypeScript</span> 및 Github Flow 형식으로
+                제작한 카카오 지도를 이용한 카페/음식점 검색 서비스입니다.<br /><br />
+                사용자가 '홍대 카페' '강남 파스타' 와 같은 키워드를 입력하면
+                <span>Kakao Local API</span>의 keywordSearch 를 통해 해당 지역의
+                장소를 검색하고, 결과를 좌측 리스트·중앙 지도·우측 상세 패널로
+                나누어 보여줍니다.<br /><br />
+
+                지도 영역은 <span>Kakao Maps JS SDK</span>를 이용해 구현했으며,
+                검색 결과를 마커로 표시하고 또한 검색 결과 중
+                <span>카페(CE7), 음식점(FD6)</span>만 필터링하도록 만들어,
+                사용자가 실제로 원하는 카테고리의 장소만 보도록 했습니다.
+
+              </div>
+              <div class="my_first_block_content_text_two">
+                <div>
+                  ▶
+                  <a
+                    href="https://PROJECT_DEPLOY_URL"
+                    <!--
+                    실제
+                    배포
+                    주소로
+                    변경
+                    target="_blank"
+                  >
+                    사이트</a
+                  >
+                  &
+                  <a
+                    href="https://github.com/cheolwankim/cafe-map-naver"
+                    target="_blank"
+                  >
+                    >깃허브</a
+                  >
+                </div>
+                <div>
+                  ▶ USED SKILLS
+                  <div>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Next.js, TypeScript, Tailwind
+                    CSS, Kakao Maps API
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <!-- Lost Ark 캐릭터 검색 서비스 -->
         <div class="my_first_block">
           <div class="my_first_content_wrap">
@@ -227,8 +293,8 @@
                 <span>JSON 데이터</span>를 가독성 높은 UI로 변환하기 위해 다양한
                 파서 유틸을 직접 구현하였으며, 등급에 따른 색상 매핑 등 시각적
                 표현을 인게임과 동일하게 설계했습니다.<br /><br />
-                <span>React + TypeScript + Tailwind CSS</span> 기반으로
-                개발했고 배포는 <span>Netlify</span>로 진행했으며, Netlify 에서 발생하는
+                <span>React + TypeScript + Tailwind CSS</span> 기반으로 개발했고
+                배포는 <span>Netlify</span>로 진행했으며, Netlify 에서 발생하는
                 문제인 SPA 새로고침 404 방지를 <code>_redirects</code> 파일을
                 추가함으로써 해결했습니다. <br /><br />
                 사용자들에게 피드백을 받고 있으며 유지 보수 및 새로운 기능들을
