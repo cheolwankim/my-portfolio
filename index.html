@@ -2,40 +2,186 @@
 <html lang="ko">
   <head>
     <meta charset="utf-8" />
+    <title>김철완 포트폴리오 | Frontend Developer</title>
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <meta
       name="description"
-      content="프론트엔드 개발자 김철완의 포트폴리오입니다."
+      content="React, Next.js, TypeScript를 사용하는 프론트엔드 개발자 김철완의 포트폴리오입니다."
     />
     <meta name="author" content="CheolWan Kim" />
-    <title>김철완의 포트폴리오</title>
+
+    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+
+    <!-- Icons / Fonts -->
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
       rel="stylesheet"
     />
     <link
-      href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700"
+      href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,600,700&display=swap"
       rel="stylesheet"
     />
     <link
-      href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic"
+      href="https://fonts.googleapis.com/css?family=Merriweather:400,300,400italic,700&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Core theme CSS (includes Bootstrap) -->
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css"
       rel="stylesheet"
     />
     <link href="css/styles.css" rel="stylesheet" />
     <link href="css/mystyles.css" rel="stylesheet" />
+
+    <!-- FontAwesome -->
     <script
       src="https://kit.fontawesome.com/3f0bdf917e.js"
       crossorigin="anonymous"
     ></script>
+
+    <!-- Minimal custom style for new layout -->
+    <style>
+      body {
+        font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont,
+          "Segoe UI", sans-serif;
+      }
+
+      #mainNav {
+        transition: background-color 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      #mainNav.navbar-shrink {
+        background-color: #ffffff;
+        box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+      }
+
+      .masthead {
+        height: 100vh;
+        min-height: 600px;
+        background: linear-gradient(
+            rgba(15, 23, 42, 0.7),
+            rgba(15, 23, 42, 0.85)
+          ),
+          url("assets/img/img2/phtpicture.png") center/cover no-repeat;
+      }
+
+      .masthead h1 {
+        font-size: 2.5rem;
+      }
+
+      @media (min-width: 992px) {
+        .masthead h1 {
+          font-size: 3.25rem;
+        }
+      }
+
+      .section-title {
+        font-weight: 700;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+
+      .section-lead {
+        color: #6c757d;
+        max-width: 640px;
+        margin: 0 auto 2.5rem;
+        font-size: 0.95rem;
+      }
+
+      .skill-card {
+        border-radius: 0.75rem;
+        border: 1px solid #e5e7eb;
+        padding: 1.5rem;
+        height: 100%;
+      }
+
+      .skill-card h4 {
+        font-size: 1.05rem;
+        margin-bottom: 0.75rem;
+      }
+
+      .skill-card ul {
+        padding-left: 1.1rem;
+        margin: 0;
+        font-size: 0.9rem;
+      }
+
+      .skill-badge {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.25rem 0.6rem;
+        border-radius: 999px;
+        font-size: 0.75rem;
+        margin-right: 0.35rem;
+        margin-bottom: 0.35rem;
+        background-color: #f3f4f6;
+      }
+
+      .project-card {
+        border-radius: 1rem;
+        border: 1px solid #e5e7eb;
+        overflow: hidden;
+        background-color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+      }
+
+      .project-card img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+      }
+
+      .project-body {
+        padding: 1.25rem 1.5rem 1.5rem;
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 auto;
+      }
+
+      .project-title {
+        font-size: 1.1rem;
+        font-weight: 700;
+        margin-bottom: 0.25rem;
+      }
+
+      .project-meta {
+        font-size: 0.8rem;
+        color: #6b7280;
+        margin-bottom: 0.75rem;
+      }
+
+      .project-tags {
+        margin-bottom: 0.75rem;
+      }
+
+      .project-body ul {
+        padding-left: 1.15rem;
+        font-size: 0.86rem;
+        margin-bottom: 1rem;
+      }
+
+      .project-links a {
+        font-size: 0.85rem;
+      }
+
+      .contact-icon {
+        font-size: 1.5rem;
+        margin-bottom: 0.4rem;
+      }
+
+      footer {
+        font-size: 0.8rem;
+      }
+    </style>
   </head>
+
   <body id="page-top">
     <!-- Navigation -->
     <nav
@@ -43,7 +189,9 @@
       id="mainNav"
     >
       <div class="container px-4 px-lg-5">
-        <a class="navbar-brand" href="#page-top">김철완 포트폴리오</a>
+        <a class="navbar-brand fw-semibold" href="#page-top">
+          CHEOLWAN KIM
+        </a>
         <button
           class="navbar-toggler"
           type="button"
@@ -63,482 +211,483 @@
             <li class="nav-item">
               <a class="nav-link" href="#projects">Projects</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <!-- Masthead -->
-    <header class="masthead">
-      <div
-        class="container px-4 px-lg-5 h-100 d-flex align-items-center justify-content-center text-center"
-      >
-        <div>
-          <h1 class="text-white font-weight-bold">프론트엔드 개발자 김철완</h1>
-          <hr class="divider" />
-          <p class="text-white-75 mb-5">
-            React, Next.js, TypeScript를 중심으로 성장하고 있는 개발자입니다.
-          </p>
-          <a class="btn btn-primary btn-xl" href="#about">더 알아보기</a>
+    <!-- Hero / Masthead -->
+    <header class="masthead d-flex align-items-center">
+      <div class="container px-4 px-lg-5 text-center">
+        <h1 class="text-white fw-bold mb-3">프론트엔드 개발자 김철완</h1>
+        <p class="text-white-50 mb-4">
+          Next.js · React · TypeScript를 중심으로
+          클라이언트부터 서버, 배포까지 직접 경험한 개발자입니다.
+          <br class="d-none d-md-block" />
+          GitHub Flow로 개인 프로젝트도 팀 개발 환경처럼 운영하고 있습니다.
+        </p>
+        <div class="d-flex justify-content-center gap-2 flex-wrap">
+          <a class="btn btn-primary btn-lg px-4" href="#projects">
+            주요 프로젝트 보기
+          </a>
+          <a
+            class="btn btn-outline-light btn-lg px-4"
+            href="https://github.com/cheolwankim"
+            target="_blank"
+          >
+            GitHub 살펴보기
+          </a>
         </div>
       </div>
     </header>
 
-    <!-- About-->
-    <section class="page-section bg-primary" id="about">
+    <!-- About -->
+    <section class="page-section" id="about">
       <div class="container px-4 px-lg-5">
-        <div class="row gx-4 gx-lg-5 justify-content-center">
-          <div class="col-lg-8 text-center">
-            <h1 class="text-white mt-0">My Skills</h1>
-
-            <hr class="divider divider-light" />
-            <p class="text-white-75 mb-4"></p>
-            <br />
-            <div style="text-align: center">
-              <img
-                src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=white"
-                height="50px"
-              />
-              <img
-                src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white"
-                height="50px"
-              />
-              <img
-                src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white"
-                height="50px"
-              />
-              <br /><br />
-              <img
-                src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white"
-                height="50px"
-              />
-              <img
-                src="https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white"
-                height="50px"
-              />
-              <img
-                src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white"
-                height="50px"
-              />
-            </div>
-            <br /><br /><br />
-            <a class="btn btn-light btn-xl" href="#services">Go to About me</a>
+        <div class="row gx-5 align-items-center">
+          <div class="col-lg-7">
+            <h2 class="section-title">About me</h2>
+            <p class="section-lead text-start">
+              컴퓨터공학 전공을 바탕으로 웹 프론트엔드 개발에 집중하고 있습니다.
+              혼자 개발하더라도 GitHub Flow, 이슈 기반 개발, PR 리뷰 등
+              팀 개발 환경을 스스로 재현하면서 프로젝트를 진행해 왔습니다.
+            </p>
+            <p class="mb-3">
+              Notion 클론, 블로그, 게임 API 기반 검색 서비스, 지도 기반
+              검색 서비스 등 실제 사용 가능한 형태의 사이드 프로젝트를
+              직접 설계·구현·배포했습니다. 프론트엔드에 집중하되,
+              Express와 MongoDB를 이용해 백엔드와 인증 흐름까지 이해하려고
+              했습니다.
+            </p>
+            <p class="mb-4">
+              단순히 화면을 만드는 것보다
+              어떤 구조가 유지보수와 확장에 유리한지,
+              어떻게 하면 협업에 방해되지 않는 코드를 쓸 수 있는지를
+              항상 고민하고 있습니다.
+            </p>
           </div>
-        </div>
-      </div>
-    </section>
-    <!-- Services-->
-    <section class="page-section" id="services">
-      <div class="container px-4 px-lg-5">
-        <h2 class="text-center mt-0">About me</h2>
-        <hr class="divider" />
-        <div class="row gx-4 gx-lg-5">
-          <div class="col-lg-3 col-md-6 text-center">
-            <div class="mt-5">
-              <div class="mb-2"><i class="fa-solid fa-user fs-1"></i></div>
-              <h3 class="h4 mb-2">김철완</h3>
-              <p class="text-muted mb-0">CheolWan Kim</p>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 text-center">
-            <div class="mt-5">
-              <div class="mb-2">
-                <i class="fa-solid fa-school fs-1"></i>
-                <!-- fs-1 text-primary -->
+          <div class="col-lg-5 mt-4 mt-lg-0">
+            <div class="skill-card">
+              <h4>기본 정보</h4>
+              <ul class="mb-3">
+                <li>이름: 김철완 (CheolWan Kim)</li>
+                <li>전공: 서경대학교 컴퓨터공학과</li>
+                <li>거주지: 서울시 동작구</li>
+              </ul>
+              <h4>개발 키워드</h4>
+              <div>
+                <span class="skill-badge">Next.js App Router</span>
+                <span class="skill-badge">React · TypeScript</span>
+                <span class="skill-badge">OAuth · JWT 인증</span>
+                <span class="skill-badge">GitHub Flow</span>
+                <span class="skill-badge">API 연동 · 에러 처리</span>
+                <span class="skill-badge">Netlify / Vercel / Render</span>
               </div>
-              <h3 class="h4 mb-2">서경대학교</h3>
-              <p class="text-muted mb-0">SeoKyung University</p>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 text-center">
-            <div class="mt-5">
-              <div class="mb-2">
-                <i class="fa-solid fa-location-dot fs-1"></i>
-              </div>
-              <h3 class="h4 mb-2">서울시 동작구</h3>
-              <p class="text-muted mb-0">
-                Dongjak-gu, Seoul, Republic of Korea
-              </p>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 text-center">
-            <div class="mt-5">
-              <div class="mb-2"><i class="fa-solid fa-envelope fs-1"></i></div>
-              <h3 class="h4 mb-2">sam_000@naver.com</h3>
-              <p class="text-muted mb-0"></p>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 text-center">
-            <div class="mt-5">
-              <div class="mb-2">
-                <i class="fa-solid fa-cake-candles fs-1"></i>
-              </div>
-              <h3 class="h4 mb-2">1995.02.27</h3>
-              <p class="text-muted mb-0"></p>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 text-center">
-            <div class="mt-5">
-              <div class="mb-2"><i class="fa-solid fa-phone fs-1"></i></div>
-              <h3 class="h4 mb-2">010-8417-8426</h3>
-              <p class="text-muted mb-0"></p>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <!-- Portfolio-->
-    <h2 class="text-center mt-0"></h2>
-    <div id="portfolio">
-      <!-- NEW BLOCK-->
 
-      <!-- Portfolio-->
-      <br /><br /><br /><br />
-      <h2 class="text-center mt-0">Projects & Works</h2>
-      <hr class="divider" />
-      <div id="portfolio">
-        <!-- 기존 프로젝트 블록들 -->
-        <!-- (Notion, Blog, 날씨, 포트폴리오 등 기존 코드 유지) -->
+    <!-- Skills -->
+    <section class="page-section bg-light" id="skills">
+      <div class="container px-4 px-lg-5">
+        <h2 class="section-title text-center">Skills</h2>
+        <p class="section-lead text-center">
+          실제 프로젝트에서 사용해본 기술 위주로 정리했습니다.
+        </p>
 
-        <!-- Cafe Map: Kakao 지도 기반 카페/음식점 검색 서비스 -->
-        <div class="my_first_block">
-          <div class="my_first_content_wrap">
-            <div class="my_first_content_title">
-              <div class="my_first_content_title_name">
-                Cafe Map 카카오 지도 기반 카페/음식점 검색
-              </div>
-              <div class="my_first_content_title_date">
-                <a href="https://github.com/cheolwankim/cafe-map-naver">
-                  ▶ 2025.11 (1인 개인 프로젝트, Github Flow 형식)
-                </a>
-              </div>
+        <div class="row gx-4 gy-4">
+          <!-- Frontend -->
+          <div class="col-md-4">
+            <div class="skill-card">
+              <h4>Frontend</h4>
+              <ul>
+                <li>React, Next.js(App Router), TypeScript</li>
+                <li>상태 관리: React Query, Context API, Redux Toolkit 경험</li>
+                <li>폼: React Hook Form + Zod 검증</li>
+                <li>스타일: Tailwind CSS, Bootstrap, CSS Modules</li>
+              </ul>
             </div>
-            <img
-              src="/assets/img/img3/cafe-map.png"
-              alt="Cafe Map 프로젝트 썸네일"
-            />
-            <div class="my_first_block_content_text">
-              <div class="my_first_block_content_text_one">
-                <span>Next.js + TypeScript</span> 및 Github Flow 형식으로 제작한
-                카카오 지도를 이용한 카페/음식점 검색 서비스입니다.<br /><br />
-                사용자가 '홍대 카페' '강남 파스타' 와 같은 키워드를 입력하면
-                <span>Kakao Local API</span>의 keywordSearch 를 통해 해당 지역의
-                장소를 검색하고, 결과를 좌측 리스트·중앙 지도·우측 상세 패널로
-                나누어 보여줍니다.<br /><br />
+          </div>
 
-                지도 영역은 <span>Kakao Maps JS SDK</span>를 이용해 구현했으며,
-                검색 결과를 마커로 표시하고 또한 검색 결과 중
-                <span>카페(CE7), 음식점(FD6)</span>만 필터링하도록 만들어,
-                사용자가 실제로 원하는 카테고리의 장소만 보도록 했습니다.
-              </div>
-              <div class="my_first_block_content_text_two">
-                <div>
-                  ▶
-                  <a href=" https://cafe-map-naver.vercel.app/" target="_blank">
-                    사이트</a
+          <!-- Backend -->
+          <div class="col-md-4">
+            <div class="skill-card">
+              <h4>Backend & Infra</h4>
+              <ul>
+                <li>Node.js + Express로 REST API 서버 구현</li>
+                <li>MongoDB + Mongoose로 스키마 설계</li>
+                <li>JWT 기반 로그인/인증, NextAuth(Google OAuth)</li>
+                <li>배포: Vercel, Netlify, Render</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Workflow -->
+          <div class="col-md-4">
+            <div class="skill-card">
+              <h4>Workflow & 협업 방식</h4>
+              <ul>
+                <li>GitHub Flow (Issue → Branch → PR → Review → Merge)</li>
+                <li>브랜치 네이밍: <code>feat/</code>, <code>fix/</code>, <code>refactor/</code></li>
+                <li>Conventional Commits, ESLint + Prettier</li>
+                <li>README / API 흐름 / 구조 문서화 습관</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="page-section" id="projects">
+      <div class="container px-4 px-lg-5">
+        <h2 class="section-title text-center">Projects & Works</h2>
+        <p class="section-lead text-center">
+          학습용 토이 수준을 넘어서, 실제로 사용할 수 있는 서비스를 목표로 한 프로젝트들입니다.
+        </p>
+
+        <div class="row gx-4 gy-4">
+          <!-- Cafe Map -->
+          <div class="col-md-6 col-lg-4">
+            <div class="project-card">
+              <img
+                src="/assets/img/img3/cafe-map.png"
+                alt="Cafe Map 프로젝트 썸네일"
+              />
+              <div class="project-body">
+                <div class="project-title">
+                  Cafe Map – 카카오 지도 기반 카페/음식점 검색
+                </div>
+                <div class="project-meta">
+                  2025.11 · 1인 개발 · GitHub Flow 적용
+                </div>
+                <div class="project-tags">
+                  <span class="skill-badge">Next.js</span>
+                  <span class="skill-badge">TypeScript</span>
+                  <span class="skill-badge">Tailwind CSS</span>
+                  <span class="skill-badge">Kakao Maps API</span>
+                </div>
+                <ul>
+                  <li>
+                    키워드 기반으로 카페/음식점(CE7, FD6 코드)만 필터링하여 지도와 리스트로 표시
+                  </li>
+                  <li>
+                    Kakao Local API + Kakao Maps JS SDK를 조합해 검색/마커/상세 패널 구성
+                  </li>
+                  <li>
+                    좌측 결과 리스트, 중앙 지도, 우측 상세 정보로 정보 구조를 명확히 분리
+                  </li>
+                </ul>
+                <div class="project-links mt-auto">
+                  <a
+                    href="https://cafe-map-naver.vercel.app/"
+                    target="_blank"
+                    class="me-2"
+                    >사이트</a
                   >
-                  &
+                  /
                   <a
                     href="https://github.com/cheolwankim/cafe-map-naver"
                     target="_blank"
+                    class="ms-2"
+                    >깃허브</a
                   >
-                    깃허브</a
-                  >
-                </div>
-                <div>
-                  ▶ USED SKILLS
-                  <div>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Next.js, TypeScript, Tailwind
-                    CSS, Kakao Maps API
-                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <!-- Lost Ark 캐릭터 검색 서비스 -->
-        <div class="my_first_block">
-          <div class="my_first_content_wrap">
-            <div class="my_first_content_title">
-              <div class="my_first_content_title_name">
-                Lost Ark 캐릭터 검색 서비스
-              </div>
-              <div class="my_first_content_title_date">
-                <a
-                  href="https://github.com/cheolwankim/lostark-search"
-                  target="_blank"
-                >
-                  ▶ 2025.08 (1인 개인프로젝트)
-                </a>
-              </div>
-            </div>
-            <img
-              src="/assets/img/img3/loasearch.png"
-              alt="Lost Ark 캐릭터 검색 프로젝트 썸네일"
-            />
-            <div class="my_first_block_content_text">
-              <div class="my_first_block_content_text_one">
-                <span>Lost Ark 공식 API</span> 를 활용하여 캐릭터의 장비 및 기타
-                세부 정보를 제공하는 웹 서비스입니다.<br /><br />
-                <span>JSON 데이터</span>를 가독성 높은 UI로 변환하기 위해 다양한
-                파서 유틸을 직접 구현하였으며, 등급에 따른 색상 매핑 등 시각적
-                표현을 인게임과 동일하게 설계했습니다.<br /><br />
-                <span>React + TypeScript + Tailwind CSS</span> 기반으로 개발했고
-                배포는 <span>Netlify</span>로 진행했으며, Netlify 에서 발생하는
-                문제인 SPA 새로고침 404 방지를 <code>_redirects</code> 파일을
-                추가함으로써 해결했습니다. <br /><br />
-                사용자들에게 피드백을 받고 있으며 유지 보수 및 새로운 기능들을
-                지속적으로 추가 할 예정입니다.
-              </div>
-              <div class="my_first_block_content_text_two">
-                <div>
-                  ▶
-                  <a href="https://lostark-search.netlify.app/" target="_blank"
+          <!-- Lost Ark -->
+          <div class="col-md-6 col-lg-4">
+            <div class="project-card">
+              <img
+                src="/assets/img/img3/loasearch.png"
+                alt="Lost Ark 캐릭터 검색 프로젝트 썸네일"
+              />
+              <div class="project-body">
+                <div class="project-title">
+                  Lost Ark 캐릭터 검색 서비스
+                </div>
+                <div class="project-meta">
+                  2025.08 · 1인 개발
+                </div>
+                <div class="project-tags">
+                  <span class="skill-badge">React</span>
+                  <span class="skill-badge">TypeScript</span>
+                  <span class="skill-badge">Tailwind CSS</span>
+                  <span class="skill-badge">Netlify</span>
+                </div>
+                <ul>
+                  <li>Lost Ark 공식 API를 사용해 캐릭터 장비·세부 정보 조회</li>
+                  <li>장비 툴팁 JSON을 파싱해 등급 색상과 핵심 정보만 UI로 재구성</li>
+                  <li>Netlify SPA 새로고침 404 이슈를 <code>_redirects</code> 설정으로 해결</li>
+                </ul>
+                <div class="project-links mt-auto">
+                  <a
+                    href="https://lostark-search.netlify.app/"
+                    target="_blank"
+                    class="me-2"
                     >사이트</a
                   >
-                  &
+                  /
                   <a
                     href="https://github.com/cheolwankim/lostark-search"
                     target="_blank"
+                    class="ms-2"
                     >깃허브</a
                   >
                 </div>
-                <div>
-                  ▶ USED SKILLS
-                  <div>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;React, TypeScript, Tailwind
-                    CSS, Netlify
-                  </div>
-                </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
 
-      <div class="my_first_block">
-        <div class="my_first_content_wrap">
-          <div class="my_first_content_title">
-            <div class="my_first_content_title_name">나만의 Notion</div>
-            <div class="my_first_content_title_date">
-              <a href="https://github.com/cheolwankim/myNotion" target="_blank">
-                ▶ 2025.04 (1인 개인프로젝트)
-              </a>
-            </div>
-          </div>
-          <img
-            src="/assets/img/img3/notionimg.png"
-            alt="Notion Clone 프로젝트 썸네일"
-          />
-          <div class="my_first_block_content_text">
-            <div class="my_first_block_content_text_one">
-              <span>Next.js</span>와 <span>TypeScript</span>를 기반으로 만든
-              문서 관리 플랫폼입니다.<br /><br />
-              Google OAuth 로그인, 문서 작성/수정/삭제/공유 기능을 지원하며,
-              <span>TipTap 에디터</span>를 활용한 실시간 텍스트 편집 기능을
-              구현했습니다.<br /><br />
-              클라이언트는 <span>Next.js + Tailwind CSS</span>,<br />
-              서버는 <span>Node.js + Express + MongoDB</span>로 구성하였으며,<br />
-              Vercel과 Render를 통해 각각 배포를 완료했습니다.
-            </div>
-            <div class="my_first_block_content_text_two">
-              <div>
-                ▶
-                <a href="https://my-notion2.vercel.app/" target="_blank"
-                  >사이트</a
-                >
-                &
-                <a
-                  href="https://github.com/cheolwankim/myNotion"
-                  target="_blank"
-                  >깃허브</a
-                >
-              </div>
-              <div>
-                ▶ USED SKILLS
-                <div>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Next.js, TypeScript, Tailwind
-                  CSS, Node.js, MongoDB
+          <!-- Notion Clone -->
+          <div class="col-md-6 col-lg-4">
+            <div class="project-card">
+              <img
+                src="/assets/img/img3/notionimg.png"
+                alt="Notion Clone 프로젝트 썸네일"
+              />
+              <div class="project-body">
+                <div class="project-title">나만의 Notion 클론</div>
+                <div class="project-meta">
+                  2025.04 · 1인 개발 · Fullstack
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="my_first_block">
-        <div class="my_first_content_wrap">
-          <div class="my_first_content_title">
-            <div class="my_first_content_title_name">Blog Project</div>
-            <div class="my_first_content_title_date">
-              <a
-                href="https://github.com/cheolwankim/myNewBlog"
-                target="_blank"
-              >
-                ▶ 2025.04 (1인 개인프로젝트)
-              </a>
-            </div>
-          </div>
-          <img
-            src="/assets/img/img3/myBlogMain.PNG"
-            alt="Blog 프로젝트 썸네일"
-          />
-          <div class="my_first_block_content_text">
-            <div class="my_first_block_content_text_one">
-              <span>React</span>를 사용하여 게시글 작성, 수정, 삭제, 댓글 기능이
-              포함된<br />
-              블로그 플랫폼을 구현했습니다.<br /><br />
-              <span>Node.js + Express</span> 기반의 백엔드 서버를 구축하여<br />
-              회원가입, 로그인(JWT 토큰 기반 인증) 기능을 개발했습니다.<br /><br />
-              프론트엔드는 <span>React + Context API</span>로 상태 관리를
-              하였으며,<br />
-              배포는 Netlify(프론트) + Render(백엔드)를 통해 진행했습니다.
-            </div>
-            <div class="my_first_block_content_text_two">
-              <div>
-                ▶
-                <a href="https://my-new-blog-self.vercel.app/" target="_blank"
-                  >사이트</a
-                >
-                &
-                <a
-                  href="https://github.com/cheolwankim/myNewBlog"
-                  target="_blank"
-                  >깃허브</a
-                >
-              </div>
-              <div>
-                ▶ USED SKILLS
-                <div>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;React, Node.js, Express,
-                  MongoDB, Context API
+                <div class="project-tags">
+                  <span class="skill-badge">Next.js</span>
+                  <span class="skill-badge">TypeScript</span>
+                  <span class="skill-badge">Tailwind CSS</span>
+                  <span class="skill-badge">Node.js</span>
+                  <span class="skill-badge">MongoDB</span>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="my_first_block">
-        <div class="my_first_content_wrap">
-          <div class="my_first_content_title">
-            <div class="my_first_content_title_name">오늘의 날씨는 어떻지?</div>
-            <div class="my_first_content_title_date">
-              <a
-                href="https://github.com/cheolwankim/weatherProject/#-introducing-project"
-                target="_blank"
-                >▶2023.11 (1인 개인프로젝트)</a
-              >
-            </div>
-          </div>
-          <img src="/assets/img/img2/weatherproject.png" />
-          <div class="my_first_block_content_text">
-            <div class="my_first_block_content_text_one">
-              <span>오늘과 내일의 날씨</span>를 한 눈에 알아볼 수 있게 만든 웹
-              사이트입니다. 일상적인 생활에서 자주 사용하고 도움이 되는게 무엇이
-              있을지 고민하다 만들게 된 사이트입니다. <br /><br />
-              <span>기상청의 오픈 API</span>
-              를 활용하여 만들었고 익숙하지 않았던 Open API 활용법을 다시 한번
-              다지고 가는 기회가 되었습니다. 여러번의 API분석을 통해서 기상예보
-              방식을 알게 되었고 이제는 모든 API를 능숙하게 다룰 수 있다는
-              자신감이 생기게 된 프로젝트입니다.
-              <br /><br />
-              <span>오늘의 전체적인 기온 및 현재와 내일의 날씨</span>에 대한
-              간략한 정보를 한 눈에 볼 수 있게 만들었고 배포는
-              <span>Netlify</span>를 통해서 진행하였습니다.
-            </div>
-            <div class="my_first_block_content_text_two">
-              <div>
-                <div>
-                  ▶
-                  <a href="https://cheolwanweather.netlify.app/" target="_blank"
+                <ul>
+                  <li>
+                    Google OAuth 로그인, 문서 생성/수정/삭제/공유 기능 구현
+                  </li>
+                  <li>
+                    Tiptap 에디터를 사용해 리치 텍스트 편집 및 자동 저장 구조 구축
+                  </li>
+                  <li>
+                    프론트(Vercel) + 백엔드(Render) 분리 배포, CORS 및 인증 문제 해결
+                  </li>
+                </ul>
+                <div class="project-links mt-auto">
+                  <a
+                    href="https://my-notion2.vercel.app/"
+                    target="_blank"
+                    class="me-2"
                     >사이트</a
                   >
-                  &
+                  /
                   <a
-                    href="https://github.com/cheolwankim/weatherProject/"
+                    href="https://github.com/cheolwankim/myNotion"
                     target="_blank"
+                    class="ms-2"
                     >깃허브</a
                   >
                 </div>
               </div>
-              <div>
-                ▶ USED SKILLS
-                <div>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;React, Bootstrap, Javascript
+            </div>
+          </div>
+
+          <!-- Blog -->
+          <div class="col-md-6 col-lg-4">
+            <div class="project-card">
+              <img
+                src="/assets/img/img3/myBlogMain.PNG"
+                alt="Blog 프로젝트 썸네일"
+              />
+              <div class="project-body">
+                <div class="project-title">Blog Project</div>
+                <div class="project-meta">
+                  2025.04 · 1인 개발 · Fullstack
+                </div>
+                <div class="project-tags">
+                  <span class="skill-badge">React</span>
+                  <span class="skill-badge">Node.js</span>
+                  <span class="skill-badge">Express</span>
+                  <span class="skill-badge">MongoDB</span>
+                </div>
+                <ul>
+                  <li>게시글·댓글 CRUD 및 JWT 기반 로그인/회원가입 기능 구현</li>
+                  <li>axios 인스턴스 + 인터셉터로 토큰 자동 첨부 및 에러 처리</li>
+                  <li>Vercel/Render 배포 과정에서 CORS·라우팅 이슈 직접 해결</li>
+                </ul>
+                <div class="project-links mt-auto">
+                  <a
+                    href="https://my-new-blog-self.vercel.app/"
+                    target="_blank"
+                    class="me-2"
+                    >사이트</a
+                  >
+                  /
+                  <a
+                    href="https://github.com/cheolwankim/myNewBlog"
+                    target="_blank"
+                    class="ms-2"
+                    >깃허브</a
+                  >
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
 
-      <!-- 세번째 블록 -->
-      <div class="my_first_block">
-        <div class="my_first_content_wrap">
-          <div class="my_first_content_title">
-            <div class="my_first_content_title_name">나만의 포트폴리오</div>
-            <div class="my_first_content_title_date">
-              <a
-                href="https://github.com/cheolwankim/my-portfolio"
-                target="_blank"
-                >▶2023 ~
-              </a>
+          <!-- Weather -->
+          <div class="col-md-6 col-lg-4">
+            <div class="project-card">
+              <img
+                src="/assets/img/img2/weatherproject.png"
+                alt="Weather 프로젝트 썸네일"
+              />
+              <div class="project-body">
+                <div class="project-title">오늘의 날씨는 어떻지?</div>
+                <div class="project-meta">
+                  2023.11 · 1인 개발
+                </div>
+                <div class="project-tags">
+                  <span class="skill-badge">React</span>
+                  <span class="skill-badge">JavaScript</span>
+                  <span class="skill-badge">Bootstrap</span>
+                  <span class="skill-badge">Netlify</span>
+                </div>
+                <ul>
+                  <li>기상청 오픈 API를 이용해 오늘·내일 날씨 정보를 제공</li>
+                  <li>API 분석을 통해 예보 체계 이해 및 응답 데이터 파싱 경험</li>
+                  <li>간단한 대시보드 형태 UI로 핵심 정보 위주로 구성</li>
+                </ul>
+                <div class="project-links mt-auto">
+                  <a
+                    href="https://cheolwanweather.netlify.app/"
+                    target="_blank"
+                    class="me-2"
+                    >사이트</a
+                  >
+                  /
+                  <a
+                    href="https://github.com/cheolwankim/weatherProject"
+                    target="_blank"
+                    class="ms-2"
+                    >깃허브</a
+                  >
+                </div>
+              </div>
             </div>
           </div>
-          <img src="/assets/img/img2/phtpicture.png" />
-          <div class="my_first_block_content_text">
-            <div class="my_first_block_content_text_one">
-              <span></span>
-              포트폴리오의 목적으로 제작되었고 자기소개, GitHub, 개인 블로그
-              링크, 보유 기술 등 이 포함되어 있으며 저에 대한 정보를 간략하고
-              빠르게 볼 수 있는 반응형 웹 사이트입니다.
-              <br /><br />
-              <span>JavaScript</span>만을 이용해서 작성하였고 변경사항이 있을 때
-              마다 꾸준히 업데이트 중이며 <span>Netlify</span>를 통해서 배포를
-              진행하였습니다.<br /><br />
-            </div>
-            <div class="my_first_block_content_text_two">
-              <div>
-                <div>
-                  ▶
+
+          <!-- Old portfolio -->
+          <div class="col-md-6 col-lg-4">
+            <div class="project-card">
+              <img
+                src="/assets/img/img2/phtpicture.png"
+                alt="포트폴리오 사이트 썸네일"
+              />
+              <div class="project-body">
+                <div class="project-title">이전 포트폴리오 사이트</div>
+                <div class="project-meta">
+                  2023 ~ · 반응형 포트폴리오 사이트
+                </div>
+                <div class="project-tags">
+                  <span class="skill-badge">JavaScript</span>
+                  <span class="skill-badge">Bootstrap</span>
+                </div>
+                <ul>
+                  <li>자기소개, GitHub, 블로그 링크, 보유 기술 등을 정리한 첫 포트폴리오</li>
+                  <li>순수 JavaScript로 UI와 인터랙션 구현</li>
+                  <li>지속적인 수정·보완을 거쳐 현재 포트폴리오로 발전</li>
+                </ul>
+                <div class="project-links mt-auto">
                   <a
                     href="https://cheolwansphtsite.netlify.app/"
                     target="_blank"
+                    class="me-2"
                     >사이트</a
                   >
-                  &
+                  /
                   <a
                     href="https://github.com/cheolwankim/my-portfolio"
                     target="_blank"
+                    class="ms-2"
                     >깃허브</a
                   >
                 </div>
-              </div>
-              <div>
-                ▶ USED SKILLS
-                <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Javascript, Bootstrap</div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <footer class="bg-light py-5">
+    </section>
+
+    <!-- Contact -->
+    <section class="page-section bg-primary text-white" id="contact">
+      <div class="container px-4 px-lg-5">
+        <h2 class="section-title text-center text-white">Contact</h2>
+        <p class="section-lead text-center text-white-50">
+          
+        </p>
+        <div class="row gx-4 gy-4 justify-content-center mt-3">
+          <div class="col-md-3 text-center">
+            <div class="contact-icon">
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="fw-semibold">이메일</div>
+            <div>sam_000@naver.com</div>
+          </div>
+          <div class="col-md-3 text-center">
+            <div class="contact-icon">
+              <i class="fa-brands fa-github"></i>
+            </div>
+            <div class="fw-semibold">GitHub</div>
+            <div>
+              <a
+                href="https://github.com/cheolwankim"
+                target="_blank"
+                class="text-white-75"
+                >github.com/cheolwankim</a
+              >
+            </div>
+          </div>
+          <div class="col-md-3 text-center">
+            <div class="contact-icon">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="fw-semibold">위치</div>
+            <div>서울시 동작구</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-light py-4">
       <div class="container px-4 px-lg-5">
         <div class="small text-center text-muted">
-          &copy;2025 . Cheol Wan Kim. All rights reserved.
+          &copy; 2025. Cheol Wan Kim. All rights reserved.
         </div>
       </div>
     </footer>
 
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
-
     <script src="js/scripts.js"></script>
-
     <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+
+    <!-- Navbar shrink on scroll -->
+    <script>
+      window.addEventListener("scroll", function () {
+        const nav = document.getElementById("mainNav");
+        if (!nav) return;
+        if (window.scrollY > 80) {
+          nav.classList.add("navbar-shrink");
+        } else {
+          nav.classList.remove("navbar-shrink");
+        }
+      });
+    </script>
   </body>
 </html>
